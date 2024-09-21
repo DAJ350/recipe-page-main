@@ -1,65 +1,170 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
 }
 
 /* Color Variables */
 :root {
-    /* Rose */
-    --rose-800: #7A284E;
-    --rose-50: #FFF7FB;
+  /* Rose */
+  --rose-800: #7a284e;
+  --rose-50: #fff7fb;
 
-    /* Stone */
-    --stone-900: #312E2C;
-    --stone-600: #5F564D;
-    --stone-150: #E3DDD7;
-    --stone-100: #F3E5D7;
+  /* Stone */
+  --stone-900: #312e2c;
+  --stone-600: #5f564d;
+  --stone-150: #e3ddd7;
+  --stone-100: #f3e5d7;
 
-    /* Brown */
-    --brown-800: #854632;
+  /* Brown */
+  --brown-800: #854632;
 
-    /* White */
-    --white: #fff;
+  /* White */
+  --white: #fff;
 }
 
 /* Typography Styles */
+
+@font-face {
+  font-family: "Outfit";
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
 .text1 {
-    font-family: "Young Serif";
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0;
+  font-family: "Young Serif";
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .text2 {
-    font-family: "Young Serif";
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0;
+  font-family: "Young Serif";
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .text3 {
-    font-family: "Outfit";
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: 0;
+  font-family: "Outfit";
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .text4 {
-    font-family: "Outfit";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0;
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
 }
 
 .text4-bold {
-    font-family: "Outfit";
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.5;
-    letter-spacing: 0;
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: var(--stone-100);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15rem;
+  padding: 8rem 3rem;
+}
+
+main {
+  background-color: var(--white);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  row-gap: 2.5rem;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  width: 736px;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Intro Image */
+figure {
+  height: 300px;
+  width: auto;
+}
+
+figure img {
+  height: 100%;
+  width: auto;
+  border-radius: 0.75rem;
+  background-size: cover;
+}
+
+/* Intro Section */
+section.description {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    row-gap: 1.5rem;
+    text-align: left;
+}
+
+section.descriptoin h1 {
+  color: var(--stone-900);
+}
+
+section.description p {
+    color: var(--stone-600);
+}
+
+/* Preparation Section */
+
+section.prep-time {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
+    padding: 2rem;
+    background-color: var(--rose-50);
+    align-items: flex-start;
+    border-radius: 0.75rem;
+}
+
+section.prep-time h3 {
+    text-align: left;
+    color: var(--rose-800);
+}
+
+section.prep-time ul {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 0.5rem;
+    list-style-position: inside;
+    color: var(--stone-600);
+}
+
+section.prep-time li::marker {
+    color: var(--rose-800);
+}
+
+section.prep-time span {
+    padding-left: 1rem;
 }
