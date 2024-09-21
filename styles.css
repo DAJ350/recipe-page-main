@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    /* Rose */
+    --rose-800: #7A284E;
+    --rose-50: #FFF7FB;
+
+    /* Stone */
+    --stone-900: #312E2C;
+    --stone-600: #5F564D;
+    --stone-150: #E3DDD7;
+    --stone-100: #F3E5D7;
+
+    /* Brown */
+    --brown-800: #854632;
+
+    /* White */
+    --white: #fff;
+}
+
+/* Typography Styles */
+.text1 {
+    font-family: "Young Serif";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.text2 {
+    font-family: "Young Serif";
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.text3 {
+    font-family: "Outfit";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.text4 {
+    font-family: "Outfit";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+.text4-bold {
+    font-family: "Outfit";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
