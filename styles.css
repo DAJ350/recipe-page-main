@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.mobile {
+  display: none;
+}
+
 /* Color Variables */
 :root {
   /* Rose */
@@ -101,29 +105,24 @@ main {
 }
 
 hr {
-    border: 1px solid var(--stone-150)
+  border: 1px solid var(--stone-150);
 }
 
 /* Intro Image */
-figure {
+
+img {
   height: 300px;
   width: auto;
-}
-
-figure img {
-  height: 100%;
-  width: auto;
   border-radius: 0.75rem;
-  background-size: cover;
 }
 
 /* Intro Section */
 section.description {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    row-gap: 1.5rem;
-    text-align: left;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  row-gap: 1.5rem;
+  text-align: left;
 }
 
 section.descriptoin h1 {
@@ -131,71 +130,193 @@ section.descriptoin h1 {
 }
 
 section.description p {
-    color: var(--stone-600);
+  color: var(--stone-600);
 }
 
 /* Preparation Section */
 
 section.prep-time {
-    display: flex;
-    flex-flow: column nowrap;
-    row-gap: 1rem;
-    padding: 2rem;
-    background-color: var(--rose-50);
-    align-items: flex-start;
-    border-radius: 0.75rem;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1rem;
+  padding: 2rem;
+  background-color: var(--rose-50);
+  align-items: flex-start;
+  border-radius: 0.75rem;
 }
 
 section.prep-time h3 {
-    text-align: left;
-    color: var(--rose-800);
+  text-align: left;
+  color: var(--rose-800);
 }
 
 section.prep-time ul {
-    display: flex;
-    flex-flow: column nowrap;
-    row-gap: 0.5rem;
-    list-style-position: inside;
-    color: var(--stone-600);
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 0.5rem;
+  list-style-position: inside;
+  color: var(--stone-600);
 }
 
 section.prep-time li::marker {
-    color: var(--rose-800);
+  color: var(--rose-800);
 }
 
 section.prep-time span {
-    padding-left: 1rem;
+  padding-left: 1rem;
 }
 
 /* Ingredients Section */
 
 section.ingredients {
-    display: flex;
-    flex-flow: column nowrap;
-    row-gap: 1.5rem;
-    align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1.5rem;
+  align-items: flex-start;
 }
 
 section.ingredients h2 {
-    color: var(--brown-800);
-    text-align: left;
+  color: var(--brown-800);
+  text-align: left;
 }
 
 section.ingredients ul {
-    position: relative;
-    left: 1.5rem;
-    display: flex;
-    flex-flow: column nowrap;
-    row-gap: 0.5rem;
-    align-items: flex-start;
-    list-style-position: outside;
+  position: relative;
+  left: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 0.5rem;
+  align-items: flex-start;
+  list-style-position: outside;
 }
 
-section.ingregients li::marker {
-    color: var(--brown-800);
+section.ingredients li::marker {
+  color: var(--brown-800);
 }
 
 section.ingredients li {
-    padding-left: 1rem;
-    color: var(--stone-600)
+  padding-left: 1rem;
+  color: var(--stone-600);
+}
+
+/* Instructions section */
+
+section.instructions {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1.5rem;
+  align-items: flex-start;
+}
+
+section.instructions h2 {
+  color: var(--brown-800);
+  text-align: left;
+}
+
+section.instructions ol {
+  list-style-position: outside;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+section.instructions li {
+  padding-left: 1rem;
+  color: var(--stone-600);
+}
+
+section.instructions li::marker {
+  color: var(--brown-800);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Nutrition Section */
+
+section.nutrition table {
+  border-collapse: collapse;
+}
+
+section.nutrition {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1.5rem;
+}
+
+section.nutrition h2 {
+  color: var(--brown-800);
+  text-align: left;
+}
+
+section.nutrition p {
+  color: var(--stone-600);
+}
+
+section.nutrition td.header {
+  text-indent: 1.7rem;
+  color: var(--stone-600);
+}
+
+section.nutrition td {
+  color: var(--brown-800);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--stone-150);
+}
+
+section.nutrition td.no-bottom-border {
+  border-bottom: none;
+}
+
+section.nutrition td.no-top-padding {
+  padding-top: none;
+}
+
+@media only screen and (max-width: 770px) and (min-width: 380px) {
+  main {
+    width: 616px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  main {
+    width: 100%;
+    row-gap: 2rem;
+    padding: 2.5rem 2rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  body {
+    padding: 0;
+    row-gap: 0;
+  }
+
+  img {
+    height: 171px;
+    border-radius: 0;
+  }
+
+  .text1 {
+    font-size: 2.25rem;
+  }
+
+  .attribution {
+    display: none;
+  }
+
+  .prep-time li {
+    text-wrap: nowrap;
+  }
 }
