@@ -139,7 +139,7 @@ section.prep-time {
   display: flex;
   flex-flow: column nowrap;
   row-gap: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: var(--rose-50);
   align-items: flex-start;
   border-radius: 0.75rem;
